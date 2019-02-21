@@ -9,11 +9,14 @@ COMPATIBLE_MACHINE = "beyonwizv2"
 
 inherit deploy
 
-SRCDATE = "20190217"
+SRCDATE = "20190220"
 
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-partitions-${SRCDATE}.zip"
+
+SRC_URI[md5sum] = "089c1e08b8fae727e8f02bca845fa94f"
+SRC_URI[sha256sum] = "2ed11b3a2e40da6ce2fd94e63658475c66dd82d990ec4e842582d0b6dda5514a"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -40,8 +43,5 @@ do_deploy() {
 }
 
 addtask deploy before do_build after do_install
-
-SRC_URI[md5sum] = "9c4bcb9a357224599b0e43d48215faa8"
-SRC_URI[sha256sum] = "6dedcfdddc014484ad1690a61965c9efa513e4261c917ac3fc5be300c1efc92d"
 
 INSANE_SKIP_${PN} += "already-stripped"
