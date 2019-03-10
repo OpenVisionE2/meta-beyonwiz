@@ -8,6 +8,8 @@ COMPATIBLE_MACHINE = "beyonwizv2"
 
 inherit kernel machine_kernel_pr
 
+MACHINE_KERNEL_PR_append = ".1"
+
 KERNEL_RELEASE = "4.4.35"
 SRCDATE = "20181224"
 
@@ -27,6 +29,7 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 SRC_URI += "http://source.mynonpublic.com/beyonwiz/beyonwiz-linux-${PV}-${SRCDATE}.tar.gz \
     file://defconfig \
     file://0001-remote.patch \
+    file://HauppaugeWinTV-dualHD.patch \
     file://findkerneldevice.py \
 "
 
