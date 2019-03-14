@@ -8,7 +8,7 @@ COMPATIBLE_MACHINE = "beyonwizv2"
 
 inherit kernel machine_kernel_pr
 
-MACHINE_KERNEL_PR_append = ".1"
+MACHINE_KERNEL_PR_append = ".2"
 
 KERNEL_RELEASE = "4.4.35"
 SRCDATE = "20181224"
@@ -30,6 +30,8 @@ SRC_URI += "http://source.mynonpublic.com/beyonwiz/beyonwiz-linux-${PV}-${SRCDAT
     file://defconfig \
     file://0001-remote.patch \
     file://HauppaugeWinTV-dualHD.patch \
+    file://dib7000-linux_4.4.179.patch \
+    file://dvb-usb-linux_4.4.179.patch \
     file://findkerneldevice.py \
 "
 
