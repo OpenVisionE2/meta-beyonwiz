@@ -8,7 +8,7 @@ COMPATIBLE_MACHINE = "beyonwizv2"
 
 inherit kernel machine_kernel_pr
 
-MACHINE_KERNEL_PR_append = ".2"
+MACHINE_KERNEL_PR_append = ".3"
 
 KERNEL_RELEASE = "4.4.35"
 SRCDATE = "20181224"
@@ -33,6 +33,7 @@ SRC_URI += "http://source.mynonpublic.com/beyonwiz/beyonwiz-linux-${PV}-${SRCDAT
     file://dib7000-linux_4.4.179.patch \
     file://dvb-usb-linux_4.4.179.patch \
     file://findkerneldevice.py \
+    file://mt7601u_check_return_value_of_alloc_skb.patch \
 "
 
 S = "${WORKDIR}/linux-${PV}"
