@@ -15,6 +15,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     beyonwiz-dvb-modules-${MACHINE} \
     beyonwiz-loadmodules-${MACHINE} \ 
     beyonwiz-libs-${MACHINE} \
+    beyonwiz-hihalt-${MACHINE} \
     beyonwiz-reader-${MACHINE} \
     beyonwiz-libreader-${MACHINE} \
     beyonwiz-partitions-${MACHINE} \
@@ -37,6 +38,7 @@ PREFERRED_VERSION_linux-beyonwiz = "4.4.35"
 PREFERRED_PROVIDER_virtual/kernel = "linux-beyonwiz"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "beyonwiz-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "beyonwiz-showiframe-${MACHINE}"
+PREFERRED_RPROVIDER_aio-grab = "beyonwiz-grab-${MACHINE}"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
