@@ -8,8 +8,6 @@ COMPATIBLE_MACHINE = "beyonwizv2"
 
 inherit kernel machine_kernel_pr
 
-MACHINE_KERNEL_PR_append = ".3"
-
 KERNEL_RELEASE = "4.4.35"
 SRCDATE = "20181224"
 
