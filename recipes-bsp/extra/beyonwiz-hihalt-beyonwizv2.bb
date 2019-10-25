@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "beyonwizv2"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 RDEPENDS_${PN} = "harfbuzz"
 

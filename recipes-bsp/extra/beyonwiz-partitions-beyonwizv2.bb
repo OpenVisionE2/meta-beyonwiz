@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "beyonwizv2"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 inherit deploy
 

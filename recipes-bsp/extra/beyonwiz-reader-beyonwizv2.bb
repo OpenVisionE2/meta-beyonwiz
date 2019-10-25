@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "libsdl"
 
-COMPATIBLE_MACHINE = "beyonwizv2"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 SRCDATE = "20190808"
 

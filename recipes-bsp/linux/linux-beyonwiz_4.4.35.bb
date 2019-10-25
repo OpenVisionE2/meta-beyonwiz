@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "beyonwizv2"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 inherit kernel machine_kernel_pr
 
