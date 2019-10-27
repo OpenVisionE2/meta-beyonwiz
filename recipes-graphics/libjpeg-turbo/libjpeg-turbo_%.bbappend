@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI_append_beyonwizv2 = " \
+SRC_URI_append_beyonwizv2 += " \
      file://libjpeg.so.62.2.0 \
 "
 
