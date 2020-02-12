@@ -25,7 +25,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gptfdisk \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvbc-only alsa"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvbc-only alsa hisil"
 
 IMAGE_CLASSES  += "beyonwiz-emmc_image"
 IMAGE_FSTYPES += "beyonwizemmc"
