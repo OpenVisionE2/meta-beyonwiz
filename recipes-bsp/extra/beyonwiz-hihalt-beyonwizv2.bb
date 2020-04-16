@@ -9,7 +9,7 @@ COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 RDEPENDS_${PN} = "harfbuzz"
 
-SRCDATE = "20190603"
+SRCDATE = "20200415"
 
 PV = "${SRCDATE}"
 
@@ -21,8 +21,8 @@ SRC_URI  = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-hihalt-${SRCDATE}.
     file://suspend.sh \
 "
 
-SRC_URI[md5sum] = "79b446224d2bf99d85ce3e96af4de088"
-SRC_URI[sha256sum] = "42f7b3aa3db88afd995e30f3498996d14e9d8aad61ae312236d11eda8bb27895"
+SRC_URI[md5sum] = "6ca75df6a63a5268d28b27b51b505153"
+SRC_URI[sha256sum] = "e42bb92446d9daabe991d43389ee94d8307097275932abedfedc8c3ca74f83c9"
 
 S = "${WORKDIR}"
 
