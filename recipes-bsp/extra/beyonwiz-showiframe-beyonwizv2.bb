@@ -1,4 +1,4 @@
-SUMMARY = "showiframe for beyonwiz Model ${MACHINE}"
+SUMMARY = "showiframe for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
