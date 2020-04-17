@@ -9,14 +9,14 @@ COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 inherit deploy
 
-SRCDATE = "20190619"
+SRCDATE = "20200417"
 
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-partitions-${SRCDATE}.zip"
 
-SRC_URI[md5sum] = "9627010e91d1052e45358640c95b694f"
-SRC_URI[sha256sum] = "989a7e9e3e16a0ef0e3ae3790f9d05f8f22fb00b5c2cb9bad7b4eb72dc99f319"
+SRC_URI[md5sum] = "763888dcc271d65268c5f6786710bd21"
+SRC_URI[sha256sum] = "d2db8736dc62c280f594c9caa6ac5ba45581d179abe9b089d098619360711484"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
