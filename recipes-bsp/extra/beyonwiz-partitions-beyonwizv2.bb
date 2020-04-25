@@ -7,16 +7,21 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
-inherit deploy
+inherit deploy update-rc.d
 
-SRCDATE = "20200417"
+SRCDATE = "20200423"
 
 S = "${WORKDIR}/patitions"
 
-SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-partitions-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-partitions-${SRCDATE}.zip \
+  file://flash-apploader \
+"
 
-SRC_URI[md5sum] = "763888dcc271d65268c5f6786710bd21"
-SRC_URI[sha256sum] = "d2db8736dc62c280f594c9caa6ac5ba45581d179abe9b089d098619360711484"
+INITSCRIPT_NAME = "flash-apploader"
+INITSCRIPT_PARAMS = "start 90 S ."
+
+SRC_URI[md5sum] = "f882d0302b249c62bec0efee4acd0772"
+SRC_URI[sha256sum] = "20b265f3cc9d8aee87c51a7e335743392a0b02e3ca36fa46626233fa2edbcc26"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -26,9 +31,11 @@ do_install() {
     install -m 0644 ${S}/bootargs.bin ${D}${datadir}/bootargs.bin
     install -m 0644 ${S}/fastboot.bin ${D}${datadir}/fastboot.bin
     install -m 0644 ${S}/apploader.bin ${D}${datadir}/apploader.bin
+    install -m 0755 -d ${D}${sysconfdir}/init.d
+    install -m 0755 ${WORKDIR}/flash-apploader ${D}${sysconfdir}/init.d/flash-apploader
 }
 
-FILES_${PN} = "${datadir}"
+FILES_${PN} = "${datadir} ${sysconfdir}"
 
 do_deploy() {
     install -d ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
