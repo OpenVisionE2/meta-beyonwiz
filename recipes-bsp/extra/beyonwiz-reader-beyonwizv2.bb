@@ -8,14 +8,14 @@ RDEPENDS_${PN} = "libsdl"
 
 COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
-SRCDATE = "20200415"
+SRCDATE = "20200612"
 
 PV = "${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-libreader-${SRCDATE}.tar.gz"
 
-SRC_URI[md5sum] = "b517c915036eadf631ecb58cff6795ca"
-SRC_URI[sha256sum] = "7a7cb4d74a6510056fec5623ffe2ebfc4a608805392bf0f2ee777dce6c1a846b"
+SRC_URI[md5sum] = "299e4067aca89f3859e81b7878722ea3"
+SRC_URI[sha256sum] = "c10bb9ea21b6682ee7e84582c8537c6e8a260cba8f7798fe8a65519e2b638931"
 
 S = "${WORKDIR}"
 
