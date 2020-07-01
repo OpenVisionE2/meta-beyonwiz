@@ -5,6 +5,11 @@ BOX_BRAND = "beyonwiz"
 
 DISTRO_FEATURES_remove = "x11 wayland"
 
+EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250  --with-fillaccelerationthreshold=190000"
+
+SOC_FAMILY = "hisi3798mv200"
+HICHIPSET = "3798mv200"
+
 MTD_KERNEL = "mmcblk0p12"
 MTD_ROOTFS = "mmcblk0p16"
 
@@ -26,7 +31,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gptfdisk \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvbc-only alsa hisil"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvbc-only alsa hisil multitranscoding"
 
 IMAGE_CLASSES  += "beyonwiz-emmc_image"
 IMAGE_FSTYPES += "beyonwizemmc"
