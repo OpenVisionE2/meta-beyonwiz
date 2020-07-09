@@ -3,7 +3,7 @@ MAINTAINER = "beyonwiz"
 
 require conf/license/license-gplv2.inc
 
-PV = "1.0"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 SRC_URI = "file://beyonwiz-libreader-beyonwizv2.sh"
 
