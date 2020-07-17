@@ -1,4 +1,3 @@
-KV = "4.4.35"
 SRCDATE = "20200613"
 
 require beyonwiz-dvb-modules-hisi.inc
