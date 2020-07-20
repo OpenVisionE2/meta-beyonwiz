@@ -3,7 +3,7 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 BOX_BRAND = "beyonwiz"
 
-DISTRO_FEATURES_remove = "x11 wayland"
+DISTRO_FEATURES_remove += "x11 wayland"
 
 EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250  --with-fillaccelerationthreshold=190000"
 
@@ -31,7 +31,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gptfdisk \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvbc-only alsa hisil multitranscoding"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvb-c alsa hisil multitranscoding HDMI AV_JACK"
 
 IMAGE_CLASSES  += "beyonwiz-emmc_image"
 IMAGE_FSTYPES += "beyonwizemmc"
@@ -47,7 +47,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-beyonwiz"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "beyonwiz-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "beyonwiz-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "beyonwiz-grab-${MACHINE}"
-PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
 
