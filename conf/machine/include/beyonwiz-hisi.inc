@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "4.4.35"
+
 BOX_BRAND = "beyonwiz"
 
 DISTRO_FEATURES_remove += "x11 wayland"
@@ -19,18 +21,18 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    beyonwiz-dvb-modules-${MACHINE} \
-    beyonwiz-loadmodules-${MACHINE} \ 
-    beyonwiz-libs-${MACHINE} \
-    beyonwiz-hihalt-${MACHINE} \
-    beyonwiz-reader-${MACHINE} \
-    beyonwiz-libreader-${MACHINE} \
-    beyonwiz-partitions-${MACHINE} \
-    beyonwiz-tntfs-${HICHIPSET} \
-    beyonwiz-buildimage \
-    e2fsprogs-resize2fs \
-    gptfdisk \
-"
+	beyonwiz-dvb-modules-${MACHINE} \
+	beyonwiz-loadmodules-${MACHINE} \ 
+	beyonwiz-libs-${MACHINE} \
+	beyonwiz-hihalt-${MACHINE} \
+	beyonwiz-reader-${MACHINE} \
+	beyonwiz-libreader-${MACHINE} \
+	beyonwiz-partitions-${MACHINE} \
+	beyonwiz-tntfs-${HICHIPSET} \
+	beyonwiz-buildimage \
+	e2fsprogs-resize2fs \
+	gptfdisk \
+	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvb-c alsa hisil multitranscoding HDMI AV_JACK vfdsymbol"
 
@@ -41,7 +43,7 @@ IMAGE_ROOTFS_SIZE ?= "524288"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
-PREFERRED_VERSION_linux-beyonwiz = "4.4.35"
+PREFERRED_VERSION_linux-beyonwiz = "${KERNELVERSION}"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-beyonwiz"
@@ -58,7 +60,6 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
-
 
 require conf/machine/include/soc-family.inc
 

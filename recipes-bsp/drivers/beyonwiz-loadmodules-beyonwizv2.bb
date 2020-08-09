@@ -1,9 +1,10 @@
 SUMMARY = "kernel modules load helper"
 MAINTAINER = "beyonwiz"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 require conf/license/license-gplv2.inc
 
-PV = "1.0"
+COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 SRC_URI = "file://beyonwiz-loadmodules-beyonwizv2.sh"
 
