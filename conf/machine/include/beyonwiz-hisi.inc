@@ -88,3 +88,5 @@ IMAGE_CMD_beyonwizemmc_append = " \
     "
 
 EXTRA_ALSA = "mv200"
+
+RCNAME = "beyonwiz2"
