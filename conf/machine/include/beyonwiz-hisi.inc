@@ -32,6 +32,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	beyonwiz-buildimage \
 	e2fsprogs-resize2fs \
 	gptfdisk \
+	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvb-c alsa hisil multitranscoding HDMI AV_JACK vfdsymbol"
@@ -53,10 +54,6 @@ PREFERRED_RPROVIDER_aio-grab = "beyonwiz-grab-${MACHINE}"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
-
-MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    "
 
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
