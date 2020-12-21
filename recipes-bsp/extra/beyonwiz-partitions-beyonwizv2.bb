@@ -9,7 +9,7 @@ COMPATIBLE_MACHINE = "^(beyonwizv2)$"
 
 inherit deploy update-rc.d
 
-SRCDATE = "20200624"
+SRCDATE = "20201218"
 
 PV = "${SRCDATE}"
 
@@ -22,8 +22,8 @@ SRC_URI = "http://source.mynonpublic.com/beyonwiz/${MACHINE}-partitions-${SRCDAT
 INITSCRIPT_NAME = "flash-apploader"
 INITSCRIPT_PARAMS = "start 90 S ."
 
-SRC_URI[md5sum] = "dd1d0d75ccbc47f53467d21e73882c2c"
-SRC_URI[sha256sum] = "a56b7b93339c2e254c9e9b037be7ca254397ea40e1fb94456929e5ca5363b950"
+SRC_URI[md5sum] = "a843de0d42cbb237119df2f30a7a6dd1"
+SRC_URI[sha256sum] = "609430fdb06ac63f005a5544db52adfa9cad1bf6fe454b01069ff35f0a899417"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
