@@ -82,10 +82,12 @@ IMAGE_CMD_beyonwizemmc_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
 	rm -f ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
 	rm -Rf ${IMAGEDIR}; \
+	rm -Rf userdata; \
 	"
 
 IMAGE_CMD_prepend = "\
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	rm -Rf ${DEPLOY_DIR_IMAGE}/userdata; \
 	"
 
 EXTRA_ALSA = "mv200"
