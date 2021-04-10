@@ -19,6 +19,6 @@ do_compile() {
 }
 
 do_install() {
-	install -d ${D}${sysconfdir}/init.d/
-	install -m 0755 ${WORKDIR}/beyonwiz-loadmodules-beyonwizv2.sh ${D}${sysconfdir}/init.d/beyonwiz-loadmodules
+	install -d ${D}${INIT_D_DIR}/
+	install -m 0755 ${WORKDIR}/beyonwiz-loadmodules-beyonwizv2.sh ${D}${INIT_D_DIR}/beyonwiz-loadmodules
 }
