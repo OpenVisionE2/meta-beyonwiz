@@ -22,7 +22,8 @@ MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	beyonwiz-dvb-modules-${MACHINE} \
-	beyonwiz-loadmodules-${MACHINE} \ 
+	beyonwiz-loadmodules-${MACHINE} \
+	beyonwiz-opengl-${MACHINE} \ 
 	beyonwiz-libs-${MACHINE} \
 	beyonwiz-hihalt-${MACHINE} \
 	beyonwiz-reader-${MACHINE} \
@@ -42,10 +43,12 @@ IMAGE_ROOTFS_SIZE ?= "524288"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
-PREFERRED_VERSION_linux-beyonwiz = "${KERNELVERSION}"
-
 #Provider
+PREFERRED_VERSION_linux-beyonwiz = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-beyonwiz"
+PREFERRED_PROVIDER_virtual/egl = "beyonwiz-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 = "beyonwiz-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 = "beyonwiz-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "beyonwiz-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "beyonwiz-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "beyonwiz-grab-${MACHINE}"
