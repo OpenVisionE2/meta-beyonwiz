@@ -34,7 +34,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gptfdisk \
 	"
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvb-c alsa hisil multitranscoding HDMI AV_JACK vfdsymbol"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc dvb-c alsa hisil multitranscoding HDMI AV_JACK vfdsymbol kodi19"
 
 IMAGE_CLASSES  += "beyonwiz-emmc_image"
 IMAGE_FSTYPES += "beyonwizemmc"
@@ -46,9 +46,9 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 #Provider
 PREFERRED_VERSION_linux-beyonwiz = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-beyonwiz"
-PREFERRED_PROVIDER_virtual/egl = "beyonwiz-opengl-${MACHINE}" 
-PREFERRED_PROVIDER_virtual/libgles1 = "beyonwiz-opengl-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles2 = "beyonwiz-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/egl ?= "beyonwiz-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 ?= "beyonwiz-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "beyonwiz-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "beyonwiz-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "beyonwiz-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "beyonwiz-grab-${MACHINE}"
